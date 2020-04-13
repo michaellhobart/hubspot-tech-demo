@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
   res.json({ message: 'Hello Fake Company! This is coming from your new EC2 instance!' })
 })
 
-app.listen(port, () => {
+app.listen(5000, () => {
   console.log(`Server listening on ${port}`)
 })
 
