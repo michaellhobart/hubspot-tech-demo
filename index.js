@@ -1,12 +1,17 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const path = require('path');
 
 app.use(cors())
 const bodyParser = require('body-parser')
 
+// app.get('/', (req, res) => {
+//   res.json({ message: 'Hello Fake Company! This is coming from your new EC2 instance!' })
+// })
+
 app.get('/', (req, res) => {
-  res.json({ message: 'Hello Fake Company! This is coming from your new EC2 instance!' })
+  res.sendFile(path.join(__dirname+'/index.html'))
 })
 
 app.listen(5000, () => {
