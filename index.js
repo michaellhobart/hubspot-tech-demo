@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 })
 
 app.listen(5000, () => {
-  console.log(`Server listening on ${port}`)
+  console.log(`Server listening on Port 5000`)
 })
 
 app.use(bodyParser.json())
